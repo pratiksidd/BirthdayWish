@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday My Gorgeous Wife ❤️</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  overflow-x:hidden;
+  font-family:'Poppins',sans-serif;
+  background:#080012;
+  color:white;
+}
+
+/* BACKGROUND */
+
+.bg{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:-10;
+
+  background:
+  radial-gradient(circle at top left,#ff4f8b55,transparent 30%),
+  radial-gradient(circle at bottom right,#7b2ff755,transparent 30%),
+  linear-gradient(135deg,#120018,#0d001f,#180028);
+
+  background-size:400% 400%;
+
+  animation:bgMove 12s ease infinite;
+}
+
+@keyframes bgMove{
+
+  0%{
+    background-position:0% 50%;
+  }
+
+  50%{
+    background-position:100% 50%;
+  }
+
+  100%{
+    background-position:0% 50%;
+  }
+}
+
+/* ROSE PETALS */
+
+.petals{
+  position:fixed;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:-5;
+}
+
+.petal{
+  position:absolute;
+  top:-50px;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+
+  0%{
+    transform:translateY(-50px) rotate(0deg);
+    opacity:0;
+  }
+
+  10%{
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(110vh) rotate(360deg);
+    opacity:0;
+  }
+}
+
+/* OPENING CARD */
+
+.cover-screen{
+
+  position:fixed;
+
+  width:100%;
+  height:100vh;
+
+  background:#120018;
+
+  z-index:9999;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  transition:1s;
+}
+
+.open-card{
+
+  width:340px;
+  height:230px;
+
+  border-radius:25px;
+
+  background:
+  linear-gradient(135deg,#ff4f8b,#7b2ff7);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+
+  cursor:pointer;
+
+  box-shadow:
+  0 0 50px rgba(255,105,180,0.5);
+
+  animation:pulse 2s infinite;
+}
+
+.open-card h2{
+
+  font-family:'Great Vibes',cursive;
+
+  font-size:3.5rem;
+}
+
+.open-card p{
+
+  margin-top:10px;
+
+  font-size:1rem;
+}
+
+@keyframes pulse{
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.05);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+}
+
+/* MAIN */
+
+.main{
+  min-height:100vh;
+  padding:60px 20px;
+  display:none;
+}
+
+.glass{
+
+  max-width:1100px;
+
+  margin:auto;
+
+  background:rgba(255,255,255,0.08);
+
+  border:1px solid rgba(255,255,255,0.15);
+
+  backdrop-filter:blur(18px);
+
+  border-radius:35px;
+
+  padding:50px 30px;
+
+  box-shadow:
+  0 0 50px rgba(255,105,180,0.25);
+
+  overflow:hidden;
+}
+
+/* TITLE */
+
+.hero-title{
+
+  font-family:'Great Vibes',cursive;
+
+  font-size:6rem;
+
+  text-align:center;
+
+  background:
+  linear-gradient(45deg,#fff,#ffb3d9,#ffe082);
+
+  -webkit-background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+
+  animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+
+  from{
+    filter:drop-shadow(0 0 5px #ff4f8b);
+  }
+
+  to{
+    filter:drop-shadow(0 0 25px #ff4f8b);
+  }
+}
+
+.subtitle{
+
+  text-align:center;
+
+  color:#ffe082;
+
+  margin-bottom:40px;
+
+  font-size:1.3rem;
+}
+
+/* SLIDER */
+
+.carousel-item img{
+
+  height:500px;
+
+  object-fit:cover;
+
+  border-radius:25px;
+}
+
+/* LOVE LETTER */
+
+.typing-box{
+
+  margin-top:50px;
+
+  background:rgba(255,255,255,0.08);
+
+  border-radius:25px;
+
+  padding:35px;
+
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+.typing-text{
+
+  line-height:2;
+
+  font-size:1.1rem;
+
+  white-space:pre-wrap;
+}
+
+/* BUTTON */
+
+.btn-love{
+
+  background:
+  linear-gradient(45deg,#ff4f8b,#7b2ff7);
+
+  border:none;
+
+  padding:15px 40px;
+
+  border-radius:50px;
+
+  color:white;
+
+  font-weight:600;
+
+  transition:0.4s;
+}
+
+.btn-love:hover{
+
+  transform:scale(1.05);
+
+  box-shadow:
+  0 10px 30px rgba(255,105,180,0.5);
+}
+
+/* MUSIC BUTTON */
+
+.music-btn{
+
+  position:fixed;
+
+  top:20px;
+  right:20px;
+
+  width:60px;
+  height:60px;
+
+  border-radius:50%;
+
+  background:rgba(255,255,255,0.15);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  cursor:pointer;
+
+  z-index:999;
+}
+
+.music-btn i{
+
+  font-size:22px;
+}
+
+/* FIREWORKS */
+
+.firework{
+
+  position:fixed;
+
+  width:6px;
+  height:6px;
+
+  border-radius:50%;
+
+  animation:explode 1s ease-out forwards;
+}
+
+@keyframes explode{
+
+  0%{
+    transform:scale(1);
+    opacity:1;
+  }
+
+  100%{
+    transform:scale(20);
+    opacity:0;
+  }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .hero-title{
+    font-size:4rem;
+  }
+
+  .carousel-item img{
+    height:320px;
+  }
+
+  .typing-text{
+    font-size:1rem;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .hero-title{
+    font-size:3rem;
+  }
+
+  .subtitle{
+    font-size:1rem;
+  }
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- BACKGROUND -->
+<div class="bg"></div>
+
+<!-- PETALS -->
+<div class="petals" id="petals"></div>
+
+<!-- OPENING CARD -->
+<div class="cover-screen" id="cover">
+
+  <div class="open-card" id="openBtn">
+
+    <h2>For My Love ❤️</h2>
+
+    <p>Click To Open Your Birthday Surprise ✨</p>
+
+  </div>
+
+</div>
+
+<!-- MUSIC BUTTON -->
+<div class="music-btn" id="musicBtn">
+  <i class="fa-solid fa-music"></i>
+</div>
+
+<!-- MAIN -->
+<section class="main" id="mainContent">
+
+  <div class="glass">
+
+    <!-- TITLE -->
+    <h1 class="hero-title">
+      Happy Birthday My Gorgeous Wife ❤️
+    </h1>
+
+    <p class="subtitle">
+      My Shreesakhi • My Best Friend • My Safe Place • My Forever Love ✨
+    </p>
+
+    <!-- MEMORY SLIDER -->
+    <div id="memorySlider" class="carousel slide mb-5" data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="1.jpeg"
+          class="d-block w-100">
+        </div>
+
+        <div class="carousel-item">
+          <img src="2.jpg"
+          class="d-block w-100">
+        </div>
+
+        <div class="carousel-item">
+          <img src="3.jpg"
+          class="d-block w-100">
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#memorySlider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#memorySlider" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+    </div>
+
+    <!-- LOVE LETTER -->
+    <div class="typing-box">
+
+      <div class="typing-text" id="typingText"></div>
+
+    </div>
+
+    <!-- BUTTON -->
+    <div class="text-center mt-5">
+
+      <button class="btn btn-love" id="fireBtn">
+
+        💌 Open My Heart
+
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+
+  <!-- Replace with your own romantic song -->
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+
+</audio>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+/* OPEN CARD */
+
+$("#openBtn").click(function(){
+
+  $("#cover").fadeOut(1500);
+
+  $("#mainContent").fadeIn(2000);
+
+  //$("#music")[0].play();
+
+});
+
+/* LOVE LETTER */
+
+const message = `
+
+Today is not just your birthday... ✨
+
+It’s the celebration of the most beautiful woman
+who turned my ordinary life into a magical love story. ❤️
+
+From the moment you came into my world,
+everything became brighter,
+happier,
+crazier,
+sweeter,
+and far more beautiful. 💖
+
+You are my favorite notification,
+my daily happiness,
+my late-night peace,
+my morning smile,
+and the only person
+who can steal my fries 🍟
+and still look adorable doing it. 😄
+
+Life with you feels like
+a perfect mix of romance,
+friendship,
+madness,
+adventure,
+inside jokes,
+and unlimited love. 💕
+
+Every moment with you becomes a memory,
+every laugh with you becomes my favorite sound,
+and every hug from you feels like home.
+
+Thank you for loving me,
+supporting me,
+understanding me,
+handling my mood swings 😅,
+and making every normal day feel special.
+
+No matter how many birthdays pass,
+I promise:
+
+I will always flirt with you ❤️
+always annoy you 😜
+always protect you 🤗
+always make you laugh 😂
+and always love you endlessly 💞
+
+You are not just my wife...
+
+You are my peace,
+my safe place,
+my best friend,
+my heartbeat,
+and the greatest blessing of my life.
+
+If I had to choose again,
+in every lifetime,
+I would still choose you. 💍
+
+So today...
+
+Smile more 😊
+Laugh loudly 😂
+Dance crazily 💃
+Eat lots of cake 🎂
+and remember forever...
+
+You are deeply,
+madly,
+completely,
+and endlessly loved by me. ❤️✨
+
+Happy Birthday My Queen 👑
+
+Forever Yours 💖
+
+`;
+
+let i = 0;
+
+function typing(){
+
+  if(i < message.length){
+
+    document.getElementById("typingText").innerHTML += message.charAt(i);
+
+    i++;
+
+    setTimeout(typing,35);
+  }
+}
+
+setTimeout(typing,2500);
+
+/* ROSE PETALS */
+
+for(let i=0;i<40;i++){
+
+  let petal = document.createElement("div");
+
+  petal.classList.add("petal");
+
+  petal.innerHTML = "🌹";
+
+  petal.style.left = Math.random() * 100 + "vw";
+
+  petal.style.fontSize = (Math.random() * 20 + 15) + "px";
+
+  petal.style.animationDuration = (Math.random() * 10 + 8) + "s";
+
+  document.getElementById("petals").appendChild(petal);
+}
+
+/* MUSIC BUTTON */
+
+let playing = true;
+
+$("#musicBtn").click(function(){
+
+  const music = $("#music")[0];
+
+  if(playing){
+
+    music.pause();
+
+    playing = false;
+
+    $(this).html('<i class="fa-solid fa-music"></i>');
+
+  }else{
+
+    music.play();
+
+    playing = true;
+
+    $(this).html('<i class="fa-solid fa-pause"></i>');
+  }
+
+});
+
+/* FIREWORKS */
+
+$("#fireBtn").click(function(){
+
+  for(let i=0;i<30;i++){
+
+    let fire = document.createElement("div");
+
+    fire.classList.add("firework");
+
+    fire.style.left = Math.random() * 100 + "vw";
+
+    fire.style.top = Math.random() * 100 + "vh";
+
+    fire.style.background =
+    `hsl(${Math.random()*360},100%,70%)`;
+
+    document.body.appendChild(fire);
+
+    setTimeout(()=>{
+      fire.remove();
+    },1000);
+  }
+
+});
+
+</script>
+
+</body>
+</html>
